@@ -15,6 +15,7 @@ public class User {
     private String name;
     private String username;
     private String password;
-    @ManyToMany(fetch = FetchType.EAGER)
+
+    @ManyToMany(fetch = FetchType.EAGER) // @JoinColumn is NOT Mandatory
     private Collection<Role> roles = new ArrayList<>();
 }
